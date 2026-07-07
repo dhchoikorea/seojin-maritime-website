@@ -1189,6 +1189,62 @@ footer a:hover{
 
 }
 
+/* ==========================================================
+   PAGE HEADER
+========================================================== */
+
+.page-header{
+
+    background-size:cover;
+
+    background-position:center;
+
+    position:relative;
+
+    height:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.page-header-overlay{
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.page-header h1{
+
+    color:#fff;
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.page-header p{
+
+    color:#fff;
+
+    font-size:20px;
+
+    margin:0;
+
+}
 
 /* ==========================================================
    END OF FILE

@@ -11,21 +11,13 @@ include __DIR__ . '/includes/header.php';
     PAGE HEADER
 ====================================================== -->
 
-<section class="page-header">
+$page_title="Company";
 
-    <div class="container">
+$page_subtitle="Reliable Partner for Global Logistics & International Trading";
 
-        <h1>Company</h1>
+$page_background="/assets/images/banner/company.jpg";
 
-        <p>
-
-            Reliable Partner for Global Logistics & International Trading
-
-        </p>
-
-    </div>
-
-</section>
+include __DIR__.'/includes/page-header.php';
 
 
 <!-- ======================================================

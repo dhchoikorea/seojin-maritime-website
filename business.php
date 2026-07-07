@@ -11,22 +11,13 @@ include __DIR__ . '/includes/header.php';
     PAGE HEADER
 ====================================================== -->
 
-<section class="page-header">
+$page_title="Business";
 
-    <div class="container">
+$page_subtitle="Global Logistics · Shipping Agency · International Trading";
 
-        <h1>Business</h1>
+$page_background="/assets/images/banner/business.jpg";
 
-        <p>
-
-            Global Logistics · Shipping Agency · International Trading
-
-        </p>
-
-    </div>
-
-</section>
-
+include __DIR__.'/includes/page-header.php';
 
 
 <!-- ======================================================
@@ -1214,45 +1205,7 @@ are one of our core services.
     CALL TO ACTION
 ====================================================== -->
 
-<section class="cta">
+<?php include __DIR__.'/includes/cta.php'; ?>
 
-<div class="container">
+<?php include __DIR__.'/includes/footer.php'; ?>
 
-<h2>
-
-Looking for a Reliable Business Partner?
-
-</h2>
-
-<p>
-
-Whether you need international logistics,
-shipping agency services
-or global sourcing,
-our experienced team is ready to assist you.
-
-</p>
-
-<div class="mt-4">
-
-<a href="/contact.php"
-class="btn btn-light btn-lg">
-
-Send Inquiry
-
-</a>
-
-<a href="/products.php"
-class="btn btn-outline-light btn-lg ms-2">
-
-View Products
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<?php include __DIR__ . '/includes/footer.php'; ?>
