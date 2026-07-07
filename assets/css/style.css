@@ -1,180 +1,1173 @@
+/* ===========================================================
+   SEOJIN MARITIME CO., LTD.
+   Official Website v1.0
+   style.css
+   =========================================================== */
+
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
 *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
+html{
+    scroll-behavior:smooth;
 }
 
 body{
 
-font-family:'Noto Sans KR',sans-serif;
+    font-family:'Noto Sans KR',sans-serif;
 
-background:#ffffff;
+    color:#333;
 
-color:#333;
+    background:#ffffff;
 
-padding-top:90px;
+    line-height:1.7;
+
+    padding-top:80px;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
 
 }
 
 a{
 
-text-decoration:none;
+    text-decoration:none;
+
+    transition:.3s;
 
 }
 
-.navbar{
+ul{
 
-background:#003b73;
+    list-style:none;
 
-transition:.3s;
+    padding:0;
 
-}
-
-.navbar-brand img{
-
-height:55px;
+    margin:0;
 
 }
 
-.nav-link{
 
-color:#fff!important;
+/* ==========================
+   COLOR
+========================== */
 
-font-size:15px;
+:root{
 
-font-weight:500;
+    --main:#003B73;
 
-margin-left:15px;
+    --sub:#0A7CC2;
 
-}
+    --light:#F7F9FC;
 
-.nav-link:hover{
+    --dark:#222;
 
-color:#66c3ff!important;
-
-}
-
-.hero{
-
-height:650px;
-
-background:linear-gradient(rgba(0,40,80,.65),rgba(0,40,80,.65)),
-url("../images/banner/main.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-display:flex;
-
-align-items:center;
-
-color:#fff;
+    --gray:#777;
 
 }
 
-.hero h1{
 
-font-size:58px;
-
-font-weight:700;
-
-}
-
-.hero p{
-
-font-size:22px;
-
-margin:25px 0;
-
-}
+/* ==========================
+   COMMON
+========================== */
 
 .section{
 
-padding:90px 0;
+    padding:90px 0;
 
 }
 
 .section-title{
 
-font-size:36px;
+    font-size:38px;
 
-font-weight:700;
+    font-weight:700;
 
-color:#003b73;
+    color:var(--main);
 
-margin-bottom:25px;
+    margin-bottom:15px;
 
 }
 
+.section-subtitle{
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
+}
+
+.text-main{
+
+    color:var(--main);
+
+}
+
+.bg-main{
+
+    background:var(--main);
+
+}
+
+.bg-lightgray{
+
+    background:#f7f7f7;
+
+}
+
+
+/* ==========================
+   BUTTON
+========================== */
+
 .btn-main{
 
-background:#005eb8;
+    background:var(--main);
 
-color:#fff;
+    color:#fff;
 
-padding:13px 35px;
+    padding:14px 34px;
 
-border-radius:4px;
+    border-radius:4px;
+
+    font-weight:600;
+
+    border:none;
 
 }
 
 .btn-main:hover{
 
-background:#003b73;
+    background:#012B53;
 
-color:#fff;
+    color:#fff;
 
 }
 
+.btn-outline-main{
+
+    border:2px solid var(--main);
+
+    color:var(--main);
+
+    padding:14px 34px;
+
+    font-weight:600;
+
+}
+
+.btn-outline-main:hover{
+
+    background:var(--main);
+
+    color:#fff;
+
+}
+
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+    background:rgba(0,0,0,.15);
+
+    backdrop-filter:blur(6px);
+
+    transition:.4s;
+
+    padding:18px 0;
+
+}
+
+.navbar.scrolled{
+
+    background:#003B73;
+
+    padding:10px 0;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.navbar-brand img{
+
+    height:58px;
+
+}
+
+.nav-link{
+
+    color:#fff !important;
+
+    font-weight:500;
+
+    margin-left:18px;
+
+    font-size:15px;
+
+}
+
+.nav-link:hover{
+
+    color:#7CC7FF !important;
+
+}
+
+
+/* ==========================
+   HERO
+========================== */
+
+.hero-image{
+
+    width:100%;
+
+    height:720px;
+
+    object-fit:cover;
+
+    filter:brightness(.55);
+
+}
+
+.carousel-caption{
+
+    bottom:26%;
+
+    text-align:left;
+
+}
+
+.carousel-caption h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+    text-shadow:0 4px 15px rgba(0,0,0,.4);
+
+}
+
+.carousel-caption p{
+
+    font-size:24px;
+
+    margin-bottom:35px;
+
+    max-width:700px;
+
+}
+
+.carousel-caption .btn{
+
+    margin-right:12px;
+
+}
+
+/* ==========================================================
+   ABOUT SECTION
+========================================================== */
+
+.about-image{
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.15);
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    transition:.5s;
+
+}
+
+.about-image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.about-content h3{
+
+    color:var(--main);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.about-content p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================================
+   BUSINESS
+========================================================== */
+
+.business-card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.business-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.business-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:var(--main);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.business-icon i{
+
+    color:#fff;
+
+    font-size:42px;
+
+}
+
+.business-card h3{
+
+    color:var(--main);
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.business-card ul{
+
+    text-align:left;
+
+}
+
+.business-card li{
+
+    padding:10px 0;
+
+    border-bottom:1px solid #ececec;
+
+    color:#555;
+
+}
+
+.business-card li:last-child{
+
+    border:none;
+
+}
+
+
+/* ==========================================================
+   PRODUCT
+========================================================== */
+
+.product-card{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    height:100%;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.16);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+}
+
+.product-card-body{
+
+    padding:25px;
+
+}
+
+.product-card h4{
+
+    color:var(--main);
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.product-card p{
+
+    color:#666;
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================================
+   HISTORY
+========================================================== */
+
+.history-box{
+
+    background:#fff;
+
+    border-left:5px solid var(--sub);
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.history-year{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:var(--main);
+
+    margin-bottom:10px;
+
+}
+
+.history-title{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================================================
+   COUNTER
+========================================================== */
+
+.counter-section{
+
+    background:linear-gradient(rgba(0,59,115,.95),
+                               rgba(0,59,115,.95)),
+                               url("../images/banner/banner02.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:#fff;
+
+}
+
+.counter-item{
+
+    text-align:center;
+
+}
+
+.counter-item h2{
+
+    font-size:54px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.counter-item p{
+
+    font-size:18px;
+
+    margin:0;
+
+}
+
+
+/* ==========================================================
+   NETWORK
+========================================================== */
+
+.network-map{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.network-box{
+
+    padding:25px;
+
+}
+
+.network-box h3{
+
+    color:var(--main);
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.network-box ul li{
+
+    padding:8px 0;
+
+    color:#555;
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.cta{
+
+    background:var(--main);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:90px 0;
+
+}
+
+.cta h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact-info{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.contact-info h3{
+
+    color:var(--main);
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+    margin-bottom:18px;
+
+    color:#555;
+
+}
+
+.contact-info i{
+
+    color:var(--sub);
+
+    width:28px;
+
+    font-size:20px;
+
+}
+
+.contact-form{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+.contact-form .form-control{
+
+    height:52px;
+
+    border-radius:6px;
+
+    margin-bottom:20px;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+
+/* ==========================================================
+   GOOGLE MAP
+========================================================== */
+
+.map-area{
+
+    width:100%;
+
+    height:450px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.map-area iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+}
+
+
+/* ==========================================================
+   NEWS
+========================================================== */
+
+.news-card{
+
+    background:#fff;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.news-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.news-body{
+
+    padding:25px;
+
+}
+
+.news-date{
+
+    color:var(--sub);
+
+    font-size:14px;
+
+    margin-bottom:10px;
+
+}
+
+.news-title{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+    color:var(--main);
+
+}
+
+.news-text{
+
+    color:#666;
+
+}
+
+
+/* ==========================================================
+   CERTIFICATE
+========================================================== */
+
+.certificate-card{
+
+    background:#fff;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.certificate-card img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:contain;
+
+    background:#fafafa;
+
+}
+
+.certificate-body{
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
 footer{
 
-background:#00264d;
+    background:#002748;
 
-color:#ddd;
+    color:#ddd;
 
-padding:50px 0;
+    padding:70px 0 30px;
 
-margin-top:80px;
+}
+
+footer h4{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+footer p{
+
+    color:#ccc;
+
+    margin-bottom:10px;
 
 }
 
 footer a{
 
-color:#ddd;
+    color:#ddd;
 
 }
 
 footer a:hover{
 
-color:#fff;
+    color:#fff;
 
 }
 
-@media(max-width:991px){
+.footer-bottom{
 
-.hero{
+    border-top:1px solid rgba(255,255,255,.15);
 
-height:500px;
+    margin-top:40px;
 
-text-align:center;
+    padding-top:25px;
 
-}
+    text-align:center;
 
-.hero h1{
+    color:#aaa;
 
-font-size:38px;
-
-}
-
-.hero p{
-
-font-size:18px;
+    font-size:14px;
 
 }
 
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.table{
+
+    background:#fff;
+
 }
+
+.table thead{
+
+    background:var(--main);
+
+    color:#fff;
+
+}
+
+.table td{
+
+    vertical-align:middle;
+
+}
+
+
+/* ==========================================================
+   ADMIN
+========================================================== */
+
+.admin-card{
+
+    background:#fff;
+
+    border-radius:10px;
+
+    padding:30px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.admin-title{
+
+    color:var(--main);
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.shadow-box{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:35px;
+
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+
+}
+
+.rounded-10{
+
+    border-radius:10px;
+
+}
+
+.rounded-20{
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1200px){
+
+    .carousel-caption h1{
+
+        font-size:54px;
+
+    }
+
+}
+
+@media (max-width:992px){
+
+    body{
+
+        padding-top:70px;
+
+    }
+
+    .navbar{
+
+        background:var(--main);
+
+    }
+
+    .hero-image{
+
+        height:520px;
+
+    }
+
+    .carousel-caption{
+
+        bottom:18%;
+
+        text-align:center;
+
+    }
+
+    .carousel-caption h1{
+
+        font-size:40px;
+
+    }
+
+    .carousel-caption p{
+
+        font-size:18px;
+
+    }
+
+    .section{
+
+        padding:70px 0;
+
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero-image{
+
+        height:430px;
+
+    }
+
+    .carousel-caption{
+
+        bottom:14%;
+
+    }
+
+    .carousel-caption h1{
+
+        font-size:30px;
+
+    }
+
+    .carousel-caption p{
+
+        font-size:16px;
+
+    }
+
+    .business-card,
+
+    .product-card,
+
+    .contact-form,
+
+    .contact-info{
+
+        margin-bottom:25px;
+
+    }
+
+    .counter-item{
+
+        margin-bottom:40px;
+
+    }
+
+    .cta h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .section{
+
+        padding:55px 0;
+
+    }
+
+    .section-title{
+
+        font-size:26px;
+
+    }
+
+    .btn-main,
+
+    .btn-outline-main{
+
+        width:100%;
+
+        margin-bottom:10px;
+
+    }
+
+    .carousel-caption .btn{
+
+        width:100%;
+
+        margin-right:0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   END OF FILE
+========================================================== */
