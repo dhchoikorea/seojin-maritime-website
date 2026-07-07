@@ -1167,6 +1167,28 @@ footer a:hover{
 
 }
 
+/* ==========================================================
+   Animation
+========================================================== */
+
+.fade-item{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s ease;
+
+}
+
+.fade-item.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
 
 /* ==========================================================
    END OF FILE
